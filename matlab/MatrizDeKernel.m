@@ -1,4 +1,4 @@
-function [ K ] = MatrizDeKernel( K, X, kernel, alfa )
+function [ K ] = MatrizDeKernel( K, X, kernel, alfa,tol)
 % Este programa calcula la matriz de Kernel segun el tipo
 % aprovecha los valores para los que alfa = 0 y esos no los calcula
 % porque siempre que se necesita Kij va multiplicado por alfaj
@@ -6,7 +6,7 @@ function [ K ] = MatrizDeKernel( K, X, kernel, alfa )
 % Creator : Joaquín Sánchez García
 % Modified by: José Manuel Proudinat Silva
 
-index = find (alfa ~= 0);
+index = find (alfa > tol );
 
 if kernel == 1
    
