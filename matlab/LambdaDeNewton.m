@@ -8,10 +8,10 @@ function [ lambda ] = LambdaDeNewton(u,g,Y,K)
 % calcular los elementos del kernel que correspondan a valores
 % de u no cero.
 
-ug = u' * g
+ug = u' * g;
 Y = sparse(diag(Y));
 H = Y * K * Y;
-uHu = u' * H * u
+uHu = u' * H * u;
 
 lambda = ug / uHu;
 
