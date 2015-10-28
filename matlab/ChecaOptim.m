@@ -31,8 +31,7 @@ end
 
 % Get the elements that most violated the optimality condition
 violated = [a; b];
-[violated, order_B] = sort(violated, 'descend');
-violated
+[~, order_B] = sort(violated, 'descend');
 B = B(order_B);
 
 % Get just k elements
